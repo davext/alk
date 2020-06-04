@@ -42,16 +42,9 @@ body {
  url = "https://script.google.com/macros/s/AKfycbxyeB9Udy5SMTw6d9M477q5NTs02dJPhubK-BZKGFmB6HgQI-DP/exec"
    
    
-   fetch(url)
-  .then(function(data) {
-    // Here you get the data to modify as you please
-     console.log("Got Data");
-      console.log(data);
-    })
-  
-  .catch(function(error) {
-    // If there is any error you will catch them here
-  });}  
+ $.get('url', function(result) {
+  console.log(result);
+});
  
  
 
