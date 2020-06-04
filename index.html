@@ -35,12 +35,22 @@ body {
   </div>
 
 <script>
- async function FillValues(){
-    let response = await        fetch('https://script.google.com/macros/s/AKfycbwl3hdxDq_oepy1qSL8077iJnLDweaLefo2W8TOgG2v/dev');
-
-   let text = await response.text();
-   console.log(text);
-}
+ function FillValues(){
+ url = "https://script.google.com/macros/s/AKfycbwl3hdxDq_oepy1qSL8077iJnLDweaLefo2W8TOgG2v/dev"
+   
+   
+   fetch(url)
+  .then(function(data) {
+    // Here you get the data to modify as you please
+     console.log("Got Data");
+      console.log(data);
+    })
+  
+  .catch(function(error) {
+    // If there is any error you will catch them here
+  });}  
+ 
+ 
 
 FillValues();
 </script>
