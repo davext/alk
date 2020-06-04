@@ -46,15 +46,16 @@ function FillValues(){
 info = JSON.parse(result)  
 console.log(info);
 
-document.getElementById("match").append(info.match);
-document.getElementById("rem").append(info.rem);
-document.getElementById("donation").append(info.donation + " " +info.country);
-document.getElementById("total").append(info.openmatch)
+$("#match").replaceWith("<h1>"+info.match+ "</h1>");
+$("#rem").replaceWith("<h1>"+info.rem+ "</h1>");
+$("#donation").replaceWith("<h1>"+info.donation + " " +info.country+ "</h1>");
+$("#total").replaceWith("<h1>"+info.openmatch+ "</h1>")
 
   
 });
  
 }
+
 
   const interval = setInterval(function() {
    FillValues();
